@@ -6,5 +6,4 @@ public class Pengguna {
     private String password;
     private String namaLengkap;
     private String level;
-
 }
