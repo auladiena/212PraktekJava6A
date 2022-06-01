@@ -24,7 +24,9 @@ public class Pengguna {
     public void update(){}
     public void delete(){}
 
-
+    public void login(){}
+    public void updatepassword(){}
+    public void resetpassword(){}
 
     public int getId() {
         return id;
