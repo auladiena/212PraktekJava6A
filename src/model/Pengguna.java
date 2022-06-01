@@ -18,6 +18,14 @@ public class Pengguna {
         this.level = level;
     }
 
+    //CRUD create read update delete
+    public void create(){}
+    public void read(){}
+    public void update(){}
+    public void delete(){}
+
+
+
     public int getId() {
         return id;
     }
