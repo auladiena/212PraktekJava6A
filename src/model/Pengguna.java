@@ -7,5 +7,4 @@ public class Pengguna {
     private String namaLengkap;
     private String level;
 
-
 }
