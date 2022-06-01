@@ -23,6 +23,5 @@ public class MyConnection {
             System.out.println("Connection error!");
         }
         return connection;
-
     }
 }
