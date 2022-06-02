@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class MyConnection {
     private static String DRIVER  = "com.mysql.cj.jdbc.Driver";
-    private static String URL   = "cjdbc:mysql://localhost:3306/";
+    private static String URL   = "jdbc:mysql://localhost:3306/";
     private static String DB_NAME  = "db_212praktek6a";
-    private static String TZ  = "?serverTimezon=Asia/Makassar";
+    private static String TZ  = "?serverTimezone=Asia/Makassar";
     private static String USER = "root";
     private static String PASS  = "";
 
