@@ -45,8 +45,7 @@ public class Pengguna {
 
             Pengguna penggunaHasilQuery;
             while (resultSet.next()){
-                System.out.println(resultSet.getString(4));
-                penggunaHasilQuery = new Pengguna(
+                  penggunaHasilQuery = new Pengguna(
                         resultSet.getInt("id"),
                         resultSet.getString("username"),
                         resultSet.getString("password"),
