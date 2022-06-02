@@ -1,11 +1,18 @@
 package model;
 
+import helper.MyConnection;
+
+import java.sql.*;
+import java.util.ArrayList;
+
 public class Pengguna {
     private int id;
     private String username;
     private String password;
     private String namaLengkap;
     private String level;
+
+    private Connection connection;
 
     public Pengguna() {
     }
@@ -18,9 +25,42 @@ public class Pengguna {
         this.level = level;
     }
 
+
     //CRUD create read update delete
     public void create(){}
-    public void read(){}
+
+
+     public ArrayList<Pengguna> read(){
+        MyConnection m = new MyConnection();
+        this.connection = m.getConnection();
+
+        ArrayList<Pengguna> listPengguna = new ArrayList<>();
+
+        String readSQL = "SELECT * FROM pengguna";
+
+        try {
+
+            Statement statement = this.connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(readSQL);
+
+            Pengguna penggunaHasilQuery;
+            while (resultSet.next()){
+                System.out.println(resultSet.getString(4));
+                penggunaHasilQuery = new Pengguna(
+                        resultSet.getInt("id"),
+                        resultSet.getString("username"),
+                        resultSet.getString("password"),
+                        resultSet.getString("namalengkap"),
+                        resultSet.getString("level")
+                );
+                listPengguna.add(penggunaHasilQuery);
+            }
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+         return listPengguna;
+    }
+    
     public void update(){}
     public void delete(){}
 
