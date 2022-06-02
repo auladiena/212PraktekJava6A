@@ -30,16 +30,22 @@ public class Pengguna {
     public void create(){
         String createSQL = "INSERT INTO `pengguna` (`id`, `username`, `password`, `namaLengkap`, `level`) " +
                 "VALUES " +
-                "(NULL, '"+this.username+"', MD5('"+this.password+"'),'"+this.namaLengkap+"','"+this.level+"')";
+                "(NULL, ?, MD5(?), ?, ?)";
 
         MyConnection m = new MyConnection();
         this.connection = m.getConnection();
-
         try {
-            Statement statement = this.connection.createStatement();
-            statement.execute(createSQL);
+//            Statement statement = this.connection.createStatement();
+
+            PreparedStatement preparedStatement = this.connection.prepareStatement(createSQL);
+            preparedStatement.setString(1, this.username);
+            preparedStatement.setString(2, this.password);
+            preparedStatement.setString(3, this.namaLengkap);
+            preparedStatement.setString(4, this.level);
+            preparedStatement.execute();
+
             System.out.println("Berhasil Create Data");
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Error Create Data");
         }
 
