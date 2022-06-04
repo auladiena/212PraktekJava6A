@@ -24,11 +24,22 @@ public class main {
 
         Pengguna mauLogin = new Pengguna();
         mauLogin.setUsername("user1");
-        mauLogin.setPassword("user 1");
+        mauLogin.setPassword("user1");
         if(mauLogin.login()){
             System.out.println("Login Berhasil");
         }else {
             System.err.println("Gagal Login");
         }
+
+        Pengguna gantiPassword = new Pengguna();
+        gantiPassword.setUsername("user2");
+        gantiPassword.setPassword("inipasswordbaru");
+
+        if (gantiPassword.updatePassword("user2")) {
+           System.out.println("Update Password Berhasil");
+       }else{
+           System.err.println("Update Password Gagal");
+         }
+       }
     }
-}
+
