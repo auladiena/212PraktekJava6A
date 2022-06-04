@@ -16,11 +16,11 @@ public class main {
 
         Pengguna coba = new Pengguna();
         coba.setId(6);
-        coba.setUsername("user 5");
-        coba.setPassword("user 5");
-        coba.setNamaLengkap("User Lima");
-        coba.setLevel("User");
-        coba.update();
+//        coba.setUsername("user 5");
+//        coba.setPassword("user 5");
+//        coba.setNamaLengkap("User Lima");
+//        coba.setLevel("User");
+        coba.delete();
 
     }
 }
