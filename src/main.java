@@ -15,11 +15,12 @@ public class main {
         }
 
         Pengguna coba = new Pengguna();
-        coba.setUsername("User 4");
-        coba.setPassword("User 4");
-        coba.setNamaLengkap("User Empat");
+        coba.setId(6);
+        coba.setUsername("user 5");
+        coba.setPassword("user 5");
+        coba.setNamaLengkap("User Lima");
         coba.setLevel("User");
-        coba.create();
+        coba.update();
 
     }
 }
