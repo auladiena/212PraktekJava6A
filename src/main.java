@@ -16,11 +16,19 @@ public class main {
 
         Pengguna coba = new Pengguna();
         coba.setId(6);
-//        coba.setUsername("user 5");
-//        coba.setPassword("user 5");
+//        coba.setUsername("user5");
+//        coba.setPassword("user5");
 //        coba.setNamaLengkap("User Lima");
 //        coba.setLevel("User");
         coba.delete();
 
+        Pengguna mauLogin = new Pengguna();
+        mauLogin.setUsername("user1");
+        mauLogin.setPassword("user 1");
+        if(mauLogin.login()){
+            System.out.println("Login Berhasil");
+        }else {
+            System.err.println("Gagal Login");
+        }
     }
 }
