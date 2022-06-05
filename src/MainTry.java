@@ -2,7 +2,7 @@ import model.Pengguna;
 
 import java.util.ArrayList;
 
-public class main {
+public class MainTry {
     public static void main(String[] args) {
 //        MyConnection m = new MyConnection();
 //        m.getConnection();
@@ -36,10 +36,10 @@ public class main {
         gantiPassword.setPassword("inipasswordbaru");
 
         if (gantiPassword.updatePassword("user2")) {
-           System.out.println("Update Password Berhasil");
-       }else{
-           System.err.println("Update Password Gagal");
-         }
-       }
+            System.out.println("Update Password Berhasil");
+        }else{
+            System.err.println("Update Password Gagal");
+        }
     }
+}
 
