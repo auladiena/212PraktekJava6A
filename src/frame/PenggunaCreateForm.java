@@ -3,12 +3,10 @@ package frame;
 import model.Pengguna;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class PenggunaCreateForm extends JFrame{
     private JTextField tfuname;
-    private JTextField tfpw;
+    private JPasswordField tfpass;
     private JTextField tfNamaLengkap;
     private JTextField tflevel;
     private JButton simpanButton;
@@ -19,13 +17,13 @@ public class PenggunaCreateForm extends JFrame{
         simpanButton.addActionListener(e -> {
             Pengguna p = new Pengguna();
             p.setUsername(tfuname.getText());
-            p.setPassword(tfpw.getText().toString());
+            p.setPassword(tfpass.getPassword().toString());
             p.setNamaLengkap(tfNamaLengkap.getText());
             p.setLevel(tflevel.getText());
             p.create();
 
             tfuname.setText("");
-            tfpw.setText("");
+            tfpass.setText("");
             tfNamaLengkap.setText("");
             tflevel.setText("");
 
